@@ -1,0 +1,40 @@
+{
+  "name": "origami-example-todo-app-chapter-1",
+  "scripts": {
+    "build:sass": "node-sass src/sass/ -o public/ --include-path ./node_modules",
+    "build:js": "rollup -c",
+    "build": "yarn build:sass & yarn build:js & react-scripts build & webpack.config.js",
+    "watch": "yarn build:sass -w & yarn build:js -w & webpack -w",
+    "start": "set PORT=9999 && origami -o && react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "webpack": "webpack-cli"
+  },
+  "dependencies": {
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "origami-cms": "^0.2.16",
+    "origami-store-base": "0.0.1-alpha.3",
+    "origami-store-lowdb": "^0.0.1-alpha.4",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-scripts": "2.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "node-sass": "^4.9.3",
+    "origami-zen": "^0.4.3-alpha.1",
+    "rollup": "^0.65.2",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "zen-css": "^1.1.14"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

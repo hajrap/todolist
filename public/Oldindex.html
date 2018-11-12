@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Origami example - Todo App</title>
+    <link rel="stylesheet" href="/todo-app.css">
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js"></script>
+     <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/create-react-class@15.6.3/create-react-class.min.js" crossorigin></script> 
+</head>
+<body>
+        <div id="root"></div>
+    <zen-icon-set></zen-icon-set>
+
+    <template id="todo-item">
+        <li class="todo-item">
+            <zen-checkbox></zen-checkbox>
+            <zen-input></zen-input>
+            <zen-icon type="cross" color="grey-200"></zen-icon>
+        </li>
+    </template>
+
+    <div class="todo center card">
+        <header>
+           <div id = "app"></div>
+            <h3>Todo List</h3>
+            <zen-button class="padding-none" hollow="true" color="active">Clear</zen-button>
+        </header>
+        <ul class="todo-items"></ul>
+        <zen-input class="new-todo" placeholder="Your next task…"></zen-input>
+    </div>
+
+    <script src="/todo-app.min.js"></script>
+
+
+</body>
+</html>
